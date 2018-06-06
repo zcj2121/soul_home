@@ -6,7 +6,7 @@
         <text v-if="userInfo.nickName" class="userinfo-nickname">{{userInfo.nickName}}</text>
         <button v-else open-type="getUserInfo" lang="zh_CN" class="weui-btn other-btn" type="default" size="mini" @getuserinfo="login">点击登录</button>
       </div>
-      
+
     </div>
     <div class="page__bd page__bd_spacing">
       <div class="weui-cells weui-cells_after-title">
@@ -44,6 +44,7 @@
 
 <script>
 import {showBusy, showSuccess, showModel} from '../../utils/index'
+import { get } from '@/utils/util'
 export default {
   data () {
     return {
@@ -84,8 +85,9 @@ export default {
     }
   },
 
-  created () {
-
+  async created () {
+    const res = await get('/weapp/demo')
+    console.log(123, res)
   },
   onShow () {
 
