@@ -14,19 +14,19 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
 
     }
   },
   methods: {
-    open() {
+    open () {
       wx.showActionSheet({
         itemList: ['A', 'B', 'C'],
         success: function (res) {
           console.log(res.tapIndex)
         }
-      });
+      })
     }
   }
 }

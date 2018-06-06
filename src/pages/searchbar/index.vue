@@ -49,27 +49,27 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       inputShowed: false,
-      inputVal: ""
+      inputVal: ''
     }
   },
   methods: {
-    showInput() {
-      this.inputShowed = true;
+    showInput () {
+      this.inputShowed = true
     },
-    hideInput() {
-      this.inputVal = '';
-      this.inputShowed = false;
+    hideInput () {
+      this.inputVal = ''
+      this.inputShowed = false
     },
-    clearInput() {
-      this.inputVal = '';
+    clearInput () {
+      this.inputVal = ''
     },
-    inputTyping(e) {
-      console.log(e);
-      this.inputVal = e.mp.detail.value;
-      console.log('输入信息为：'+e.mp.detail.value);
+    inputTyping (e) {
+      console.log(e)
+      this.inputVal = e.mp.detail.value
+      console.log('输入信息为：' + e.mp.detail.value)
     }
   }
 }

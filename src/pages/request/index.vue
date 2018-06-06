@@ -34,28 +34,28 @@
 </template>
 
 <script>
-import Fly from "flyio/dist/npm/wx";
+// import Fly from "flyio/dist/npm/wx";
 export default {
-  data() {
+  data () {
     return {
       contentNewsList: []
     }
   },
   methods: {
     getNewsData: function (type) {
-      wx.showLoading({
-        title: '加载中',
-        mask: true
-      })
+      // wx.showLoading({
+      //   title: '加载中',
+      //   mask: true
+      // })
 
-      let fly = new Fly; //创建fly实例
-      fly.get('https://v.juhe.cn/toutiao/index', {
-        type: type,
-        key: 'fc35d7872c25744ab4669c7d9dbcf15e'
-      }).then(res => {
-        wx.hideLoading()
-        this.contentNewsList = res.data.result.data;
-      })
+      // let fly = new Fly; //创建fly实例
+      // fly.get('https://v.juhe.cn/toutiao/index', {
+      //   type: type,
+      //   key: 'fc35d7872c25744ab4669c7d9dbcf15e'
+      // }).then(res => {
+      //   wx.hideLoading()
+      //   this.contentNewsList = res.data.result.data;
+      // })
     }
   }
 }

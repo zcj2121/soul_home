@@ -1,61 +1,61 @@
 import Vue from 'vue'
 import App from './App'
-import store from './store';
-Vue.config.productionTip = false;
-App.mpType = 'app';
-Vue.prototype.$store = store;
+import store from './store'
 import '../static/weui/weui.css'
+Vue.config.productionTip = false
+App.mpType = 'app'
+Vue.prototype.$store = store
 const app = new Vue({
   App
 })
-app.$mount();
+app.$mount()
 
 export default {
   // 这个字段走 app.json
   config: {
     pages: [
-      'pages/index/index',
-      'pages/button/button',
-      'pages/list/list',
-      'pages/input/input',
-      'pages/slider/slider',
-      'pages/uploader/uploader',
+      'pages/index/main',
+      'pages/button/main',
+      'pages/list/main',
+      'pages/input/main',
+      'pages/slider/main',
+      'pages/uploader/main',
 
-      'pages/article/article',
-      'pages/badge/badge',
-      'pages/flex/flex',
-      'pages/footer/footer',
-      'pages/gallery/gallery',
-      'pages/grid/grid',
-      'pages/icons/icons',
-      'pages/loadmore/loadmore',
-      'pages/panel/panel',
-      'pages/preview/preview',
-      'pages/progress/progress',
-      'pages/swiper/swiper',
+      'pages/article/main',
+      'pages/badge/main',
+      'pages/flex/main',
+      'pages/footer/main',
+      'pages/gallery/main',
+      'pages/grid/main',
+      'pages/icons/main',
+      'pages/loadmore/main',
+      'pages/panel/main',
+      'pages/preview/main',
+      'pages/progress/main',
+      'pages/swiper/main',
 
-      'pages/actionsheet/actionsheet',
-      'pages/dialog/dialog',
-      'pages/msg/msg',
-      'pages/msg-fail/msg-fail',
-      'pages/msg-success/msg-success',
-      'pages/picker/picker',
-      'pages/mulLinkagePicker/mulLinkagePicker',
-      'pages/toast/toast',
-      'pages/navbar/navbar',
-      'pages/tabbar/tabbar',
+      'pages/actionsheet/main',
+      'pages/dialog/main',
+      'pages/msg/main',
+      'pages/msg-fail/main',
+      'pages/msg-success/main',
+      'pages/picker/main',
+      'pages/mulLinkagePicker/main',
+      'pages/toast/main',
+      'pages/navbar/main',
+      'pages/tabbar/main',
 
-      'pages/searchbar/searchbar',
+      'pages/searchbar/main',
 
-      'pages/request/request',
-      'pages/vuex/vuex',
-      'pages/vuexPage/vuexPage',
-      'pages/rate/rate',
+      'pages/request/main',
+      'pages/vuex/main',
+      'pages/vuexPage/main',
+      'pages/rate/main',
 
-      'pages/test/test',
-      'pages/user/user',
-      '^pages/homes/homes',
-      'pages/userEdit/userEdit',
+      'pages/test/main',
+      'pages/user/main',
+      '^pages/homes/main',
+      'pages/userEdit/main'
     ], // Will be filled in webpack
     window: {
       backgroundTextStyle: 'light',
@@ -70,24 +70,24 @@ export default {
       borderStyle: 'black',
       list: [
         {
-          pagePath: 'pages/homes/homes',
+          pagePath: 'pages/homes/main',
           text: '首页',
           iconPath: '/static/images/home.png',
-          selectedIconPath: '/static/images/homeH.png',
+          selectedIconPath: '/static/images/homeH.png'
         },
         {
-          pagePath: 'pages/index/index',
+          pagePath: 'pages/index/main',
           text: '消息',
           iconPath: '/static/images/msg.png',
-          selectedIconPath: '/static/images/msgH.png',
+          selectedIconPath: '/static/images/msgH.png'
         },
         {
-          pagePath: 'pages/user/user',
+          pagePath: 'pages/user/main',
           text: '我的',
           iconPath: '/static/images/user.png',
-          selectedIconPath: '/static/images/userH.png',
-        },
-      ],
+          selectedIconPath: '/static/images/userH.png'
+        }
+      ]
     }
   }
 }

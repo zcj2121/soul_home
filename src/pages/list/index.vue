@@ -78,18 +78,17 @@
 
 <script>
 // Use Vuex
-import base64 from '../../../static/images/base64';
+import base64 from '../../../static/images/base64'
 export default {
-  data() {
+  data () {
     return {
       icon: ''
     }
   },
-  mounted() {
-    this.icon = base64.icon20;
+  mounted () {
+    this.icon = base64.icon20
   }
 }
-
 </script>
 <style>
 

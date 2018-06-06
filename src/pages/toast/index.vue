@@ -15,25 +15,25 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
 
     }
   },
   methods: {
-    openToast() {
+    openToast () {
       wx.showToast({
         title: '已完成',
         icon: 'success',
         duration: 3000
-      });
+      })
     },
-    openLoading() {
+    openLoading () {
       wx.showToast({
         title: '数据加载中',
         icon: 'loading',
         duration: 3000
-      });
+      })
     }
   }
 }

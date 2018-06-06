@@ -50,38 +50,38 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       date: '',
       sexs: ['男', '女'],
       sexIndex: '',
-      city: '',
-    };
+      city: ''
+    }
   },
 
-  components: {  },
+  components: { },
 
   methods: {
-    bindDateChange(e) {
-      this.date = e.mp.detail.value;
-      console.log(e.mp.detail.value);
+    bindDateChange (e) {
+      this.date = e.mp.detail.value
+      console.log(e.mp.detail.value)
     },
-    bindCityChange(e) {
-      this.city = e.mp.detail.value;
-      console.log(e.mp.detail.value);
+    bindCityChange (e) {
+      this.city = e.mp.detail.value
+      console.log(e.mp.detail.value)
     },
-    bindSexChange(e) {
-      this.sexIndex = e.mp.detail.value;
-    },
+    bindSexChange (e) {
+      this.sexIndex = e.mp.detail.value
+    }
   },
 
-  created() { 
-  
+  created () {
+
   },
-  onShow() {
+  onShow () {
 
   }
-};
+}
 </script>
 
 <style scoped>

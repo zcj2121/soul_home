@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       sliderValue: '300',
       sliderMin: 100,
@@ -31,22 +31,22 @@ export default {
     }
   },
   methods: {
-    sliderChange1(e) {
-      console.log('滑动选择的值为：' + e.mp.detail.value);
+    sliderChange1 (e) {
+      console.log('滑动选择的值为：' + e.mp.detail.value)
     },
-    sliderChange2(e) {
-      this.sliderValue = e.mp.detail.value;
-      console.log('滑动选择的值为：' + e.mp.detail.value);
+    sliderChange2 (e) {
+      this.sliderValue = e.mp.detail.value
+      console.log('滑动选择的值为：' + e.mp.detail.value)
     },
-    sliderChange3(e) {
-      this.sliderValue = e.mp.detail.value;
-      this.sliderValueText = `滑动选择的值为： ${e.mp.detail.value}`;
+    sliderChange3 (e) {
+      this.sliderValue = e.mp.detail.value
+      this.sliderValueText = `滑动选择的值为： ${e.mp.detail.value}`
     },
-    sliderChange4(e) {
-      this.sliderMin = e.mp.detail.value;
+    sliderChange4 (e) {
+      this.sliderMin = e.mp.detail.value
     },
-    sliderChange5(e) {
-      this.sliderMax = e.mp.detail.value;
+    sliderChange5 (e) {
+      this.sliderMax = e.mp.detail.value
     }
   }
 }

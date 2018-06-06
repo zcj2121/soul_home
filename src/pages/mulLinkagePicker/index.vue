@@ -22,7 +22,7 @@
 <script>
 import mulLinkAgeArray from '../../../static/js/mulLinkAgeArray'
 export default {
-  data() {
+  data () {
     return {
       pickerShow: false,
       isShowMask: false,
@@ -32,55 +32,55 @@ export default {
       columnTwo: []
     }
   },
-  mounted() {
-    this._initPicker();
+  mounted () {
+    this._initPicker()
   },
   methods: {
-    pickerChange(e) {
-      let _this = this;
-      let value = e.mp.detail.value;
+    pickerChange (e) {
+      let _this = this
+      let value = e.mp.detail.value
       // 如果是第一列滚动
       if (value[0] !== _this.pickerValue[0]) {
-        let columnTwoNew = _this.mulLinkAgeArray[value[0]].children;
-        _this.columnTwo = [];
+        let columnTwoNew = _this.mulLinkAgeArray[value[0]].children
+        _this.columnTwo = []
         for (let i = 0; i < columnTwoNew.length; i++) {
-          _this.columnTwo.push(columnTwoNew[i].label);
+          _this.columnTwo.push(columnTwoNew[i].label)
         }
-        _this.pickerValue = value;
-        _this.pickerValue[1] = 0;
+        _this.pickerValue = value
+        _this.pickerValue[1] = 0
       }
       // 如果第二列滚动
       if (value[1] !== this.pickerValue[1]) {
-        _this.pickerValue[1] = e.mp.detail.value[1];
+        _this.pickerValue[1] = e.mp.detail.value[1]
       }
-      console.log('选中的值为：' + _this.mulLinkAgeArray[value[0]].label + '-' + _this.mulLinkAgeArray[value[0]].children[value[1]].label);
-      console.log('pickerValue：' + this.pickerValue);
+      console.log('选中的值为：' + _this.mulLinkAgeArray[value[0]].label + '-' + _this.mulLinkAgeArray[value[0]].children[value[1]].label)
+      console.log('pickerValue：' + this.pickerValue)
     },
-    pickerConfirm() {
-      console.log('选中的值为：' + this.mulLinkAgeArray[this.pickerValue[0]].label + '-' + this.mulLinkAgeArray[this.pickerValue[0]].children[this.pickerValue[1]].label);
-      console.log('pickerValue：' + this.pickerValue);
-      this.isShowMask = false;
-      this.pickerShow = false;
+    pickerConfirm () {
+      console.log('选中的值为：' + this.mulLinkAgeArray[this.pickerValue[0]].label + '-' + this.mulLinkAgeArray[this.pickerValue[0]].children[this.pickerValue[1]].label)
+      console.log('pickerValue：' + this.pickerValue)
+      this.isShowMask = false
+      this.pickerShow = false
     },
-    pickerCancel() {
-      this.isShowMask = false;
-      this.pickerShow = false;
+    pickerCancel () {
+      this.isShowMask = false
+      this.pickerShow = false
     },
-    showPickerView() {
-      this.isShowMask = true;
-      this.pickerShow = true;
+    showPickerView () {
+      this.isShowMask = true
+      this.pickerShow = true
     },
-    maskClick() {
-      this.pickerCancel();
+    maskClick () {
+      this.pickerCancel()
     },
-    _initPicker() {
-      let _this = this;
-      let mulLinkAgeArray = this.mulLinkAgeArray;
+    _initPicker () {
+      let _this = this
+      let mulLinkAgeArray = this.mulLinkAgeArray
       for (let i = 0; i < mulLinkAgeArray.length; i++) {
-        _this.columuOne.push(mulLinkAgeArray[i].label);
+        _this.columuOne.push(mulLinkAgeArray[i].label)
       }
       // 渲染第二列
-      let columnTwoArray = mulLinkAgeArray[_this.pickerValue[0]].children;
+      let columnTwoArray = mulLinkAgeArray[_this.pickerValue[0]].children
       for (let i = 0; i < columnTwoArray.length; i++) {
         _this.columnTwo.push(columnTwoArray[i].label)
       }

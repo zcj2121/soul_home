@@ -15,13 +15,13 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
 
     }
   },
   methods: {
-    openSuccess() {
+    openSuccess () {
       wx.navigateTo({
         url: '../msg-success/msg-success'
       })

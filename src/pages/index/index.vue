@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       list: [
         {
@@ -84,30 +84,30 @@ export default {
           pages: ['request', 'vuex', 'rate']
         }
       ]
-    };
+    }
   },
 
   components: {},
 
   methods: {
-    kindToggle(e) {
-      var id = e.currentTarget.id,
-        list = this.list;
-      for (var i = 0, len = list.length; i < len; ++i) {
-        if (list[i].id == id) {
-          list[i].open = !list[i].open;
+    kindToggle (e) {
+      let id = e.currentTarget.id
+      let list = this.list
+      for (let i = 0, len = list.length; i < len; ++i) {
+        if (list[i].id === id) {
+          list[i].open = !list[i].open
         } else {
-          list[i].open = false;
+          list[i].open = false
         }
       }
-      this.list = list;
+      this.list = list
     }
   },
 
-  created() { },
-  onShow() {
+  created () { },
+  onShow () {
   }
-};
+}
 </script>
 
 <style scoped>

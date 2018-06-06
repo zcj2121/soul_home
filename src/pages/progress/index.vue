@@ -46,30 +46,30 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       progress: 0,
       disabled: false
     }
   },
   methods: {
-    upload() {
-      if (this.disabled) return;
-      this.progress = 0;
-      this.disabled = true;
-      this._next.call(this);
+    upload () {
+      if (this.disabled) return
+      this.progress = 0
+      this.disabled = true
+      // this._next.call(this)
     },
 
-    _next() {
-      var _this = this;
+    _next () {
+      let _this = this
       if (_this.progress >= 100) {
-        _this.disabled = false;
-        return true;
+        _this.disabled = false
+        return true
       }
       _this.progress++
       setTimeout(function () {
-        _this._next.call(_this);
-      }, 20);
+        // _this._next.call(_this)
+      }, 20)
     }
   }
 }

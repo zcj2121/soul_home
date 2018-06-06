@@ -18,26 +18,26 @@
 <script>
 
 export default {
-  data() {
+  data () {
     return {
       imgUrls: [
         '../../static/images/banner1.jpg',
         '../../static/images/banner2.jpg',
-        '../../static/images/banner3.jpg',
+        '../../static/images/banner3.jpg'
       ],
       indicatorDots: false,
       autoplay: true,
       interval: 5000,
-      duration: 1000,
-    };
+      duration: 1000
+    }
   },
   components: {
   },
   methods: {
   },
-  onShow() {
+  onShow () {
   }
-};
+}
 </script>
 
 <style scoped>

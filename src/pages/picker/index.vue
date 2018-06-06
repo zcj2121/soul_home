@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       array: ['美国', '中国', '巴西', '日本'],
       index: 0,
@@ -41,25 +41,25 @@ export default {
     }
   },
   methods: {
-    bindPickerChange(e) {
-      console.log('选中的值为：' + this.array[e.mp.detail.value]);
+    bindPickerChange (e) {
+      console.log('选中的值为：' + this.array[e.mp.detail.value])
     },
-    MultiPickerChange(e) {
+    MultiPickerChange (e) {
       console.log('选中的值为：' + this.multiArray[0][e.mp.detail.value[0]] + '-' + this.multiArray[1][e.mp.detail.value[1]] + '-' + this.multiArray[2][e.mp.detail.value[2]])
     },
-    MultiPickerColumChange(e) {
-      console.log('列发生变化：' + '第' + parseInt(e.mp.detail.column + 1) + '列发生了变化，这列变化的值为:' + this.multiArray[e.mp.detail.column][e.mp.detail.value]);
+    MultiPickerColumChange (e) {
+      console.log('列发生变化：' + '第' + parseInt(e.mp.detail.column + 1) + '列发生了变化，这列变化的值为:' + this.multiArray[e.mp.detail.column][e.mp.detail.value])
     },
-    bindTimeChange(e) {
-      console.log('选中的时间为：' + e.mp.detail.value);
+    bindTimeChange (e) {
+      console.log('选中的时间为：' + e.mp.detail.value)
     },
-    bindDateChange(e) {
-      console.log('选中的日期为：' + e.mp.detail.value);
+    bindDateChange (e) {
+      console.log('选中的日期为：' + e.mp.detail.value)
     },
-    CityChange(e) {
-      console.log('选中的城市为：' + e.mp.detail.value);
+    CityChange (e) {
+      console.log('选中的城市为：' + e.mp.detail.value)
     },
-    multiLinkagePicker() {
+    multiLinkagePicker () {
       wx.navigateTo({
         url: '../mulLinkagePicker/mulLinkagePicker'
       })

@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       indicatorDots: true,
       autoplay: true,
@@ -33,11 +33,11 @@ export default {
     }
   },
   methods: {
-    swiperChange(e) {
-      console.log('第' + e.mp.detail.current + '张轮播图发生了滑动');
+    swiperChange (e) {
+      console.log('第' + e.mp.detail.current + '张轮播图发生了滑动')
     },
-    animationfinish(e) {
-      console.log('第' + e.mp.detail.current + '张轮播图滑动结束');
+    animationfinish (e) {
+      console.log('第' + e.mp.detail.current + '张轮播图滑动结束')
     }
   }
 }

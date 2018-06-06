@@ -55,55 +55,55 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       files: []
-    };
+    }
   },
   methods: {
-    chooseImage(e) {
-      let _this = this;
+    chooseImage (e) {
+      let _this = this
       wx.chooseImage({
         count: 1, // 默认9
         sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
         sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-        success: function(res) {
-          console.log('成功上传：' + res.tempFilePaths);
+        success: function (res) {
+          console.log('成功上传：' + res.tempFilePaths)
           // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-          _this.files = _this.files.concat(res.tempFilePaths);
+          _this.files = _this.files.concat(res.tempFilePaths)
         },
-        fail: function() {
-          console.log('fail');
+        fail: function () {
+          console.log('fail')
         },
-        complete: function() {
-          console.log('commplete');
+        complete: function () {
+          console.log('commplete')
         }
-      });
+      })
     },
-    predivImage(e) {
-      console.log(e);
+    predivImage (e) {
+      console.log(e)
       wx.previewImage({
         current: e.currentTarget.id, // 当前显示图片的http链接
         urls: this.files // 需要预览的图片http链接列表
-      });
+      })
     },
-    deleteImg(e) {
-      Array.prototype.indexOf = function(val) {
-        for (let i = 0; i < this.length; i++) {
-          if (this[i] == val) return i;
-        }
-        return -1;
-      };
-      Array.prototype.remove = function(val) {
-        let index = this.indexOf(val);
-        if (index > -1) {
-          this.splice(index, 1);
-        }
-      };
-      this.files.remove(e.currentTarget.id);
+    deleteImg (e) {
+      // Array.prototype.indexOf = function (val) {
+      //   for (let i = 0; i < this.length; i++) {
+      //     if (this[i] == val) return i
+      //   }
+      //   return -1
+      // }
+      // Array.prototype.remove = function (val) {
+      //   let index = this.indexOf(val)
+      //   if (index > -1) {
+      //     this.splice(index, 1)
+      //   }
+      // }
+      // this.files.remove(e.currentTarget.id)
     }
   }
-};
+}
 </script>
 
 <style>

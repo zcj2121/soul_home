@@ -197,16 +197,16 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       showTopTips: false,
       time: '09:01',
       date: '2015-09-01',
-      countryCodes: ["+86", "+80", "+84", "+87"],
+      countryCodes: ['+86', '+80', '+84', '+87'],
       countryCodesIndex: 0,
-      countries: ["中国", "美国", "英国"],
+      countries: ['中国', '美国', '英国'],
       countryIndex: 0,
-      accounts: ["微信号", "QQ", "Email"],
+      accounts: ['微信号', 'QQ', 'Email'],
       accountsIndex: 0,
 
       radioItems: [
@@ -222,58 +222,59 @@ export default {
     }
   },
   methods: {
-    checkboxChange(e) {
-      console.log('checkbox发生change事件，携带value值为：' + e.mp.detail.value);
-      var checkboxItems = this.checkboxItems, values = e.mp.detail.value;
-      for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
-        checkboxItems[i].checked = false;
+    checkboxChange (e) {
+      console.log('checkbox发生change事件，携带value值为：' + e.mp.detail.value)
+      let checkboxItems = this.checkboxItems
+      let values = e.mp.detail.value
+      for (let i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
+        checkboxItems[i].checked = false
 
-        for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
-          if (checkboxItems[i].value == values[j]) {
-            checkboxItems[i].checked = true;
-            break;
+        for (let j = 0, lenJ = values.length; j < lenJ; ++j) {
+          if (checkboxItems[i].value === values[j]) {
+            checkboxItems[i].checked = true
+            break
           }
         }
       }
-      this.checkboxItems = checkboxItems;
+      this.checkboxItems = checkboxItems
     },
-    radioChange(e) {
-      console.log('radio发生change事件，携带value值为：' + e.mp.detail.value);
-      let radioItems = this.radioItems;
+    radioChange (e) {
+      console.log('radio发生change事件，携带value值为：' + e.mp.detail.value)
+      let radioItems = this.radioItems
       for (let i = 0; i < radioItems.length; ++i) {
-        radioItems[i].checked = radioItems[i].value === e.mp.detail.value;
+        radioItems[i].checked = radioItems[i].value === e.mp.detail.value
       }
-      this.radioItems = radioItems;
+      this.radioItems = radioItems
     },
-    switchChange(e) {
-      console.log("switch发生change事件，携带value值为："+ e.mp.detail.value);
+    switchChange (e) {
+      console.log('switch发生change事件，携带value值为：' + e.mp.detail.value)
     },
-    bindDateChange(e) {
-      this.date = e.mp.detail.value;
-      console.log(e.mp.detail.value);
+    bindDateChange (e) {
+      this.date = e.mp.detail.value
+      console.log(e.mp.detail.value)
     },
-    bindTimeChange(e) {
-      this.time = e.mp.detail.value;
-      console.log(e.mp.detail.value);
+    bindTimeChange (e) {
+      this.time = e.mp.detail.value
+      console.log(e.mp.detail.value)
     },
-    showTopTipsFun() {
-      this.showTopTips = true;
+    showTopTipsFun () {
+      this.showTopTips = true
       setTimeout(() => {
-        this.showTopTips = false;
+        this.showTopTips = false
       }, 2000)
     },
 
-    bindCountryChange(e) {
-      this.countryIndex = e.mp.detail.value;
+    bindCountryChange (e) {
+      this.countryIndex = e.mp.detail.value
     },
-    bindAccountChange(e) {
-      this.accountsIndex = e.mp.detail.value;
+    bindAccountChange (e) {
+      this.accountsIndex = e.mp.detail.value
     },
-    bindCountryCodeChange(e) {
-      this.countryCodesIndex = e.mp.detail.value;
+    bindCountryCodeChange (e) {
+      this.countryCodesIndex = e.mp.detail.value
     },
-    bindAgreeChange(e) {
-      this.isAgree = !this.isAgree;
+    bindAgreeChange (e) {
+      this.isAgree = !this.isAgree
     }
   }
 }

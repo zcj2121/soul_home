@@ -111,9 +111,9 @@
 </template>
 
 <script>
-import base64 from '../../../static/images/base64';
+import base64 from '../../../static/images/base64'
 export default {
-  data() {
+  data () {
     return {
       icon20: base64.icon20,
       icon60: base64.icon60

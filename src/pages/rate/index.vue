@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       max: 5,
       rateScore: '',
@@ -29,9 +29,9 @@ export default {
     }
   },
   methods: {
-    selectRate(e) {
-      this.tempValue = e.mp.currentTarget.dataset.index;
-      this.rateScore = this.rateScoreDesc[this.tempValue];
+    selectRate (e) {
+      this.tempValue = e.mp.currentTarget.dataset.index
+      this.rateScore = this.rateScoreDesc[this.tempValue]
     }
   }
 }

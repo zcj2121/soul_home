@@ -10,14 +10,14 @@
     </div>
     <div class="page__bd page__bd_spacing">
       <div class="weui-cells weui-cells_after-title">
-        <navigator url="/pages/userEdit/userEdit" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <navigator url="/pages/userEdit/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
           <div class="weui-cell__hd">
             <image :src="icon1" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
           </div>
           <div class="weui-cell__bd">个人资料</div>
           <div class="weui-cell__ft weui-cell__ft_in-access"></div>
         </navigator>
-        <navigator url="/pages/navbar/navbar" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <navigator url="/pages/navbar/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
           <div class="weui-cell__hd">
             <image :src="icon2" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
           </div>
@@ -34,7 +34,7 @@
       </div>
       <div class="weui-footer weui-footer_fixed-bottom">
         <div class="weui-footer__links">
-          <a @click="bindNavigateTo('/pages/homes/homes')" class="weui-footer__link">灵魂家园</a>
+          <a @click="bindNavigateTo('/pages/homes/main')" class="weui-footer__link">灵魂家园</a>
         </div>
         <div class="weui-footer__text">Copyright © 2008-2018 soulfamily.cn</div>
       </div>
@@ -43,55 +43,54 @@
 </template>
 
 <script>
-import {showBusy,showSuccess,showModel} from '../../utils/index'
+import {showBusy, showSuccess, showModel} from '../../utils/index'
 export default {
-  data() {
+  data () {
     return {
       userInfo: { avatarUrl: '', nickName: '' },
       icon1: '../../static/images/personal.png',
       icon2: '../../static/images/article.png',
-      icon3: '../../static/images/collect.png',
-    };
+      icon3: '../../static/images/collect.png'
+    }
   },
 
   components: {},
 
   methods: {
-    login() {
+    login () {
       showBusy('正在登录')
       wx.login({
-        success: ()=> {
+        success: () => {
           wx.getUserInfo({
-            success: (res)=> {
-              if(res){
-                showSuccess('登录成功');
+            success: (res) => {
+              if (res) {
+                showSuccess('登录成功')
                 this.userInfo = res.userInfo
               } else {
-                util.showModel('请求失败')
+                showModel('请求失败')
               }
-              
             },
-            error: (error)=> {
+            error: (error) => {
               showModel('请求失败', error)
             }
           })
         }
       })
     },
-    bindNavigateTo(url) {
+    bindNavigateTo (url) {
       wx.switchTab({
         url
       })
     }
   },
 
-  created() { 
-  
+  created () {
+
   },
-  onShow() {
+  onShow () {
 
   }
-};
+}
 </script>
 
 <style scoped>
