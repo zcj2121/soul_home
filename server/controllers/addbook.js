@@ -20,16 +20,16 @@ module.exports = async (ctx) => {
     }
     let url = 'https://api.douban.com/v2/book/isbn/' + isbn
     const bookinfo = await getJSON(url)
-    console.log(bookinfo)
     const rate = bookinfo.rating.average
     const { title, image, alt, publisher, summary, price } = bookinfo
     const tags = bookinfo.tags.map(v => {
       return `${v.title} ${v.count}`
     }).toString()
     const author = bookinfo.author.toString()
+    const addtime = new Date()
     try {
       await mysql('books').insert({
-        isbn, openid, rate, title, image, alt, publisher, summary, price, tags, author
+        isbn, openid, rate, title, image, alt, publisher, summary, price, tags, author, addtime
       })
       ctx.state.data = {
         title,

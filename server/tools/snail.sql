@@ -11,5 +11,5 @@ create table books(
   price varchar(100),
   rate float,
   tags varchar(100),
-  author varchar(100),
-)
+  author varchar(100)
+);

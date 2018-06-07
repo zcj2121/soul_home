@@ -71,4 +71,7 @@
     text-align: left;
     font-size: 14px;
   }
+  .text-primary{
+    color: #f44336
+  }
 </style>

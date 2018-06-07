@@ -5,16 +5,16 @@
         <div class="sosver">
           <div class="sosver-per">
             <div class="section-authors-img">
-              <image class="section-img" src="../../static/images/banner1.jpg"></image>
+              <image class="section-img" :src="book.user_info.avatarUrl"></image>
             </div>
-            <div class="section-authors">{{book.openid}}</div>
+            <div class="section-authors">{{book.user_info.nickName}}</div>
           </div>
-          <div class="section-authors times">12.12 12:47</div>
+          <div class="section-authors times">{{book.addtime}}</div>
         </div>
-        <div class="section-con">{{book.title}}</div>
+        <div class="section-con text-primary">{{book.title}}</div>
       </div>
       <div class="article__footer">
-        <span>豆瓣评分： <span>{{book.rate}}</span></span>
+        <span>评分： <span class="text-primary">{{book.rate}} </span> <Rate :rate="book.rate"></Rate></span>
         <!--<span><span>12</span>阅读 </span>-->
         <!--<span><span>12</span>评论 </span>-->
         <!--<span><span>12</span>喜欢 </span>-->
@@ -28,8 +28,17 @@
 </template>
 
 <script>
+  import Rate from '@/components/Rate'
   export default {
-    props: ['book']
+    data () {
+      return {
+        time: ''
+      }
+    },
+    props: ['book'],
+    components: {
+      Rate
+    }
   }
 </script>
 
