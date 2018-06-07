@@ -5,53 +5,51 @@ import '../static/weui/weui.css'
 Vue.config.productionTip = false
 // App.mpType = 'app'
 // Vue.prototype.$store = store
-const app = new Vue({
-  App
-})
+const app = new Vue(App)
 app.$mount()
 
 export default {
   // 这个字段走 app.json
   config: {
     pages: [
-      // 'pages/button/main',
-      // 'pages/list/main',
-      // 'pages/input/main',
-      // 'pages/slider/main',
-      // 'pages/uploader/main',
-      //
-      // 'pages/article/main',
-      // 'pages/badge/main',
-      // 'pages/flex/main',
-      // 'pages/footer/main',
-      // 'pages/gallery/main',
-      // 'pages/grid/main',
-      // 'pages/icons/main',
-      // 'pages/loadmore/main',
-      // 'pages/panel/main',
-      // 'pages/preview/main',
-      // 'pages/progress/main',
-      // 'pages/swiper/main',
-      //
-      // 'pages/actionsheet/main',
-      // 'pages/dialog/main',
-      // 'pages/msg/main',
-      // 'pages/msg-fail/main',
-      // 'pages/msg-success/main',
-      // 'pages/picker/main',
-      // 'pages/mulLinkagePicker/main',
-      // 'pages/toast/main',
-      // 'pages/navbar/main',
-      // 'pages/tabbar/main',
-      //
-      // 'pages/searchbar/main',
-      //
-      // 'pages/request/main',
-      // 'pages/vuex/main',
-      // 'pages/vuexPage/main',
-      // 'pages/rate/main',
-      //
-      // 'pages/test/main',
+      'pages/button/main',
+      'pages/list/main',
+      'pages/input/main',
+      'pages/slider/main',
+      'pages/uploader/main',
+
+      'pages/article/main',
+      'pages/badge/main',
+      'pages/flex/main',
+      'pages/footer/main',
+      'pages/gallery/main',
+      'pages/grid/main',
+      'pages/icons/main',
+      'pages/loadmore/main',
+      'pages/panel/main',
+      'pages/preview/main',
+      'pages/progress/main',
+      'pages/swiper/main',
+
+      'pages/actionsheet/main',
+      'pages/dialog/main',
+      'pages/msg/main',
+      'pages/msg-fail/main',
+      'pages/msg-success/main',
+      'pages/picker/main',
+      'pages/mulLinkagePicker/main',
+      'pages/toast/main',
+      'pages/navbar/main',
+      'pages/tabbar/main',
+
+      'pages/searchbar/main',
+
+      'pages/request/main',
+      'pages/vuex/main',
+      'pages/vuexPage/main',
+      'pages/rate/main',
+
+      'pages/test/main',
       'pages/index/main',
       'pages/user/main',
       '^pages/homes/main',
@@ -59,13 +57,13 @@ export default {
     ], // Will be filled in webpack
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
+      navigationBarBackgroundColor: '#f44336',
       navigationBarTitleText: '灵魂家园',
-      navigationBarTextStyle: 'black'
+      navigationBarTextStyle: 'light'
     },
     tabBar: {
-      color: '#fff',
-      backgroundColor: '#000000',
+      color: '#000',
+      backgroundColor: '#F8F8F8',
       selectedColor: '#f44336',
       borderStyle: 'black',
       list: [
