@@ -11,7 +11,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .container {
     height: 100%;
     display: flex;
@@ -39,39 +39,43 @@
     background-color: #F8F8F8;
     font-size: 16px;
     font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+    .page__hd {
+      padding: 30rpx 40rpx;
+    }
+
+    .page__bd {
+      padding-bottom: 40rpx;
+    }
+
+    .page__bd_spacing {
+      padding-left: 30rpx;
+      padding-right: 30rpx;
+    }
+
+    .page__ft {
+      padding-bottom: 10rpx;
+      text-align: center;
+    }
+
+    .page__title {
+      text-align: left;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .page__desc {
+      margin-top: 10rpx;
+      color: #888888;
+      text-align: left;
+      font-size: 14px;
+    }
   }
 
-  .page__hd {
-    padding: 30rpx 40rpx;
-  }
 
-  .page__bd {
-    padding-bottom: 40rpx;
-  }
-
-  .page__bd_spacing {
-    padding-left: 30rpx;
-    padding-right: 30rpx;
-  }
-
-  .page__ft {
-    padding-bottom: 10rpx;
-    text-align: center;
-  }
-
-  .page__title {
-    text-align: left;
-    font-size: 20px;
-    font-weight: 400;
-  }
-
-  .page__desc {
-    margin-top: 10rpx;
-    color: #888888;
-    text-align: left;
-    font-size: 14px;
-  }
   .text-primary{
     color: #f44336
+  }
+  .text-def{
+    color:#888;
   }
 </style>

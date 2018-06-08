@@ -5,6 +5,7 @@ const app = new Vue(App)
 app.$mount()
 export default {
   config: {
-    'navigationBarTitleText': '灵魂家园'
+    'navigationBarTitleText': '灵魂家园',
+    'enablePullDownRefresh': true
   }
 }

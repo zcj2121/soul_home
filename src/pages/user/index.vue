@@ -142,66 +142,66 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .page{
     overflow-x: hidden;
     width:100%;
-  }
-.page__hd{
-  text-align:center;
-  background:#fff;
-  margin-right:-50%;
-  margin-left:-50%;
-  border-radius:0rpx 0rpx 50% 50%;
-  overflow: hidden;
-}
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: inherit;
-  border:none;
-  position: inherit;
-  border-radius: inherit;
-  box-sizing:inherit;
-}
-.userinfo[disabled] {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: inherit;
-  border:none;
-  position: inherit;
-  border-radius: inherit;
-  box-sizing:inherit;
-}
+    .page__hd{
+      text-align:center;
+      background:#fff;
+      margin-right:-50%;
+      margin-left:-50%;
+      border-radius:0rpx 0rpx 50% 50%;
+      overflow: hidden;
+    }
+    .userinfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: inherit;
+      border:none;
+      position: inherit;
+      border-radius: inherit;
+      box-sizing:inherit;
+    }
+    .userinfo[disabled] {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: inherit;
+      border:none;
+      position: inherit;
+      border-radius: inherit;
+      box-sizing:inherit;
+    }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  border-radius: 50%;
-  /*border:2rpx solid #f44336;*/
-  margin-top: 20rpx;
-  /*padding:6rpx;*/
-}
+    .userinfo-avatar {
+      width: 128rpx;
+      height: 128rpx;
+      border-radius: 50%;
+      /*border:2rpx solid #f44336;*/
+      margin-top: 20rpx;
+      /*padding:6rpx;*/
+    }
 
-.userinfo-nickname {
-  color: #000;
-  font-size: 30rpx;
-  margin: 24rpx 0 24rpx 0;
-  height: 70rpx;
-}
+    .userinfo-nickname {
+      color: #000;
+      font-size: 30rpx;
+      margin: 24rpx 0 24rpx 0;
+      height: 70rpx;
+    }
 
-.other-btn{
-  margin-top:25rpx;
-}
-.page__bd{
-  padding:0rpx;
-}
-.weui-cells{
-  margin-top:60rpx;
-}
-  .scan-btn{
-    text-align: center;
+    .other-btn{
+      margin-top:25rpx;
+    }
+    .page__bd{
+      padding:0rpx;
+    }
+    .weui-cells{
+      margin-top:60rpx;
+    }
+    .scan-btn{
+      text-align: center;
+    }
   }
 </style>
